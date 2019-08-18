@@ -7,9 +7,415 @@
 
 </head>
 <body>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
+    <header class="header">
+        <div class="header__wrap wrap">
+            <div class="header__logo">osom test</div>
+            <div class="contacts">
+                <div class="contacts__phone-number">+ 38 095 92 333 93</div>
+                <div class="messengers">
+                    <img class="messengers__image" src="images/tg.png" alt="Telegram logo">
+                    <img class="messengers__image" src="images/wa.png" alt="WhatsApp logo">
+                </div>
+                <div class="vertical-divider"></div>
+                <div class="language-switcher">
+                    <div class="language-switcher__wrap">
+                        <a class="language-switcher__lang-item language-switcher__lang-item--active">
+                            <svg class="language-switcher__flag" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="22" height="7" fill="white"/>
+                                <rect y="7" width="22" height="8" fill="#0037A3"/>
+                                <rect y="15" width="22" height="7" fill="#DB2A29"/>
+                            </svg>
+                            <span class="language-switcher__lang-name">ru</span>
+                        </a>
+                        <a class="language-switcher__lang-item">
+                            <svg class="language-switcher__flag" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="-11" width="45" height="22" fill="white"/>
+                                <path d="M-11 13.2083C-11 11.7395 -11 10.2742 -11 8.8055C-10.9578 8.80894 -10.9191 8.81238 -10.8769 8.81238C-4.22274 8.81238 2.43494 8.81238 9.0891 8.81238C9.14537 8.81238 9.20164 8.81238 9.26495 8.81238C9.26495 8.73327 9.26495 8.68168 9.26495 8.63008C9.26495 5.79925 9.26495 2.96842 9.26495 0.137586C9.26495 0.0928705 9.26143 0.0447154 9.25791 0C10.7597 0 12.2579 0 13.7597 0C13.7562 0.0275172 13.7526 0.058474 13.7526 0.0859912C13.7526 2.94778 13.7526 5.80613 13.7526 8.66792C13.7526 8.71263 13.7597 8.75391 13.7667 8.81926C20.5193 8.81926 27.2614 8.81926 34 8.81926C34 10.288 34 11.7361 34 13.2083C27.2474 13.2083 20.5053 13.2083 13.7491 13.2083C13.7491 16.1492 13.7491 19.0729 13.7491 22C12.2474 22 10.7632 22 9.25791 22C9.25791 19.066 9.25791 16.1388 9.25791 13.2048C9.15944 13.2048 9.08558 13.2048 9.01172 13.2048C2.41032 13.2048 -4.18757 13.2048 -10.789 13.2048C-10.8593 13.2014 -10.9297 13.2048 -11 13.2083Z" fill="#CF142B"/>
+                                <path d="M8 0C8 2.32733 8 4.65466 8 7C7.93522 6.97478 7.89203 6.96037 7.84884 6.93875C3.26015 4.64385 -1.33213 2.34534 -5.92442 0.0468348C-5.94961 0.0324241 -5.97481 0.0180134 -6 0C-1.33213 0 3.33213 0 8 0Z" fill="#00247D"/>
+                                <path d="M29 0C28.0391 0.482014 27.0782 0.967626 26.1136 1.44964C22.4787 3.26619 18.8437 5.08273 15.2087 6.89928C15.1512 6.92806 15.09 6.95683 15 7C15 4.65108 15 2.32374 15 0C19.6679 0 24.3321 0 29 0Z" fill="#00247D"/>
+                                <path d="M34 0C33.0545 0.514581 32.1089 1.02916 31.1634 1.53999C27.2352 3.66217 23.3105 5.78435 19.3789 7.90277C19.2711 7.96287 19.139 7.99291 19.0174 7.99667C18.0162 8.00418 17.0151 8.00043 16 7.97038C16.0521 7.94033 16.1008 7.91028 16.153 7.88023C20.9432 5.2923 25.7335 2.70437 30.5238 0.116438C30.5829 0.0826335 30.6419 0.0413168 30.6976 0C31.7995 0 32.898 0 34 0Z" fill="#CF142B"/>
+                                <path d="M-10.9646 0C-10.9081 0.0413097 -10.8515 0.0863748 -10.7914 0.116418C-5.91987 2.70766 -1.04478 5.29515 3.82677 7.8864C3.87273 7.91269 3.92222 7.93522 4 7.98028C3.93283 7.99155 3.90101 7.99906 3.86566 7.99906C2.85812 7.99906 1.85058 8.00282 0.843036 7.99531C0.736979 7.99531 0.623852 7.954 0.5284 7.90518C-3.2437 5.89978 -7.01933 3.89813 -10.7914 1.89274C-10.8586 1.85894 -10.9293 1.83265 -11 1.80261C-11 1.23929 -11 0.675977 -11 0.112663C-11 0.0751086 -10.9753 0.0375543 -10.9646 0Z" fill="#CF142B"/>
+                                <path d="M8 16C8 18.0113 8 20.001 8 22C3.34295 22 -1.3033 22 -6 22C-1.31411 19.9918 3.33213 17.999 8 16Z" fill="#00247D"/>
+                                <path d="M28.9891 22C24.3309 22 19.6727 22 15 22C15 20.0051 15 18.0134 15 16C19.6763 17.9949 24.3382 19.9866 29 21.9753C28.9964 21.9846 28.9928 21.9938 28.9891 22Z" fill="#00247D"/>
+                                <path d="M-11 21.9696C-10.198 21.5913 -9.39248 21.2098 -8.59047 20.8315C-4.53158 18.9171 -0.472686 17.0028 3.58969 15.0917C3.70825 15.0358 3.85122 15.0029 3.98721 15.0029C4.98799 14.9963 5.98528 14.9996 7 15.0259C6.95467 15.049 6.91282 15.0753 6.86749 15.095C3.105 16.8712 -0.657497 18.6441 -4.41999 20.4203C-5.48353 20.9236 -6.54708 21.4268 -7.6141 21.9235C-7.71174 21.9696 -7.83379 21.9959 -7.94537 21.9959C-8.96358 22.0025 -9.9783 21.9992 -10.9965 21.9992C-10.993 21.986 -10.9965 21.9794 -11 21.9696Z" fill="#CF142B"/>
+                                <path d="M19.0071 15.0008C19.0567 15.0008 19.1098 15.0008 19.1594 15.0008C20.1405 15.0008 21.118 14.9975 22.0991 15.0041C22.2125 15.0041 22.3329 15.0305 22.4356 15.0765C26.2396 16.8412 30.0365 18.6058 33.8404 20.3704C33.9538 20.423 34.0034 20.479 33.9998 20.6041C33.9892 21.0584 33.9963 21.5128 33.9963 22C28.9845 19.6691 23.9905 17.3514 19 15.0305C19 15.0206 19.0035 15.0107 19.0071 15.0008Z" fill="#CF142B"/>
+                            </svg>
+                            <span class="language-switcher__lang-name">en</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li class="navigation__item">
+                    <a href="#">Процесс оформления</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#">О компании</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#">Блог</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#">Стать партнером</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="head-block">
+            <div class="head-block__wrap wrap">
+                <div class="head-block__title">Гражданство Вануату за инвестиции</div>
+                <div class="head-block__secondary-text">Компания  Haven Vanuatu Limited является разработчиком программы и официальный агентом, уполномоченным правительством Вануату</div>
+            </div>
+        </section>
+        <section class="license">
+            <div class="license__wrap wrap">
+                <div class="license__text-block">
+                    <p class="license__paragraph">
+                        Заявки на получение гражданства подаются в Комиссию по гражданству лицензированным Правительством агентом. Подать прошение на оформление гражданства через интернет или лично не представляется возможным.
+                    </p>
+                    <div class="license__warning">
+                        <svg width="8" height="59" viewBox="0 0 8 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 2C0 0.895431 0.895431 0 2 0H6C7.10457 0 8 0.895431 8 2V41C8 42.1046 7.10457 43 6 43H2C0.895431 43 0 42.1046 0 41V2Z" fill="white"/>
+                            <path d="M0 53C0 51.8954 0.895431 51 2 51H6C7.10457 51 8 51.8954 8 53V57C8 58.1046 7.10457 59 6 59H2C0.895431 59 0 58.1046 0 57V53Z" fill="white"/>
+                        </svg>
+                        <p>
+                            Посещать остров для подачи документов и сдачи биометрии не требуется. Процесс проходит только при посредничестве сертифицированного специалиста.
+                        </p>
+                    </div>
+                    <span class="license__caption">
+                        (согласно Vanuatu Citizenship Act [CAP 112] Section 20; Citizenship (DSP) Regulation Order No. 215 of 2016; Privileges for Honorary Citizenship (DSP) Regulation Order No. 216 of 2016)
+                    </span>
+                </div>
+                <div class="license__image-container">
+                    <img class="license__image" src="images/license.png" alt="License image">
+                    <span class="license__image-text">Наша лицензия</span>
+                </div>
+            </div>
+        </section>
+        <section class="advantages">
+            <div class="advantages__wrap wrap">
+                <div class="advantages__title">
+                    Преимущества гражданства Вануату
+                </div>
+                <div class="advantages__list">
+                    <div class="advantages__list-item">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 11H19M19 11L10 2M19 11L10 20" stroke="#59B1BC" stroke-width="5"/>
+                        </svg>
+                        <span class="advantages__list-text">
+                            <b>Скоростная проверка кандидатов</b> - всего 7 дней
+                        </span>
+                    </div>
+                    <div class="advantages__list-item">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 11H19M19 11L10 2M19 11L10 20" stroke="#59B1BC" stroke-width="5"/>
+                        </svg>
+                        <span class="advantages__list-text">
+                            <b>Въезд без визы в 129 стран</b>, включая Великобританию и государства Шенгена
+                        </span>
+                    </div>
+                    <div class="advantages__list-item">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 11H19M19 11L10 2M19 11L10 20" stroke="#59B1BC" stroke-width="5"/>
+                        </svg>
+                        <span class="advantages__list-text">
+                            <b>Рекордный срок оформления</b> - от 3 недель до 2 месяцев
+                        </span>
+                    </div>
+                    <div class="advantages__list-item">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 11H19M19 11L10 2M19 11L10 20" stroke="#59B1BC" stroke-width="5"/>
+                        </svg>
+                        <span class="advantages__list-text">
+                            Возможность получить <b>долгосрочные визы в Соединенные Штаты и Канаду</b>
+                        </span>
+                    </div>
+                    <div class="advantages__list-item">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 11H19M19 11L10 2M19 11L10 20" stroke="#59B1BC" stroke-width="5"/>
+                        </svg>
+                        <span class="advantages__list-text">
+                            <b>Конфиденциальность</b> процесса получения гражданства
+                        </span>
+                    </div>
+                    <div class="advantages__list-item">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 11H19M19 11L10 2M19 11L10 20" stroke="#59B1BC" stroke-width="5"/>
+                        </svg>
+                        <span class="advantages__list-text">
+                            <b>Визит на Вануату</b> во время оформления документов <b>не нужен</b>
+                        </span>
+                    </div>
+                    <div class="advantages__list-item">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 11H19M19 11L10 2M19 11L10 20" stroke="#59B1BC" stroke-width="5"/>
+                        </svg>
+                        <span class="advantages__list-text">
+                            Проживать на острове <b>не требуется</b>
+                        </span>
+                    </div>
+                    <div class="advantages__list-item">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 11H19M19 11L10 2M19 11L10 20" stroke="#59B1BC" stroke-width="5"/>
+                        </svg>
+                        <span class="advantages__list-text">
+                            Возможность открывать <b>счета в надежных банках</b> по всему миру
+                        </span>
+                    </div>
+                    <div class="advantages__list-item">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 11H19M19 11L10 2M19 11L10 20" stroke="#59B1BC" stroke-width="5"/>
+                        </svg>
+                        <span class="advantages__list-text">
+                            Вместе с заявителем получить паспорт могут <b>все члены семьи</b>
+                        </span>
+                    </div>
+                    <div class="advantages__list-item">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 11H19M19 11L10 2M19 11L10 20" stroke="#59B1BC" stroke-width="5"/>
+                        </svg>
+                        <span class="advantages__list-text">
+                            Возможность <b>оплаты в биткоинах</b>
+                        </span>
+                    </div>
+                    <div class="advantages__list-item">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 11H19M19 11L10 2M19 11L10 20" stroke="#59B1BC" stroke-width="5"/>
+                        </svg>
+                        <span class="advantages__list-text">
+                            <b>Социальная и политическая стабильность</b>, основанная на членстве страны в  Британском Содружестве Наций
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="calculation">
+            <div class="calculation__wrap wrap">
+                <div class="calculation__title">
+                    Примеры расчетов стоимости
+                </div>
+                <div class="horizontal-divider calculation__divider"></div>
+                <div class="calculation__secondary-title">
+                    Инвестиция в Правительственный фонд
+                </div>
+                <div class="calculation__caption">
+                    Чтобы получить гражданство Вануату за инвестиции, необходимо внести пожертвование в Правительственный фонд.
+                </div>
+                <div class="prices-table">
+                    <span class="prices-table__item prices-table__item--header-bg">Items</span>
+                    <span class="prices-table__item prices-table__item--header-bg">Single applicant</span>
+                    <span class="prices-table__item prices-table__item--header-bg">Married Couple</span>
+                    <span class="prices-table__item prices-table__item--header-bg">Family of 3</span>
+                    <span class="prices-table__item prices-table__item--header-bg">Family of 4</span>
+                    <span class="prices-table__item prices-table__item--header-bg">Additional family members</span>
+                    <span class="prices-table__item prices-table__item--main-color prices-table__item--title">Government Selling Price</span>
+                    <span class="prices-table__item prices-table__item--main-color">150,000</span>
+                    <span class="prices-table__item prices-table__item--main-color">150,000</span>
+                    <span class="prices-table__item prices-table__item--main-color">150,000</span>
+                    <span class="prices-table__item prices-table__item--main-color">150,000</span>
+                    <span class="prices-table__item prices-table__item--main-color">150,000</span>
+                    <span class="prices-table__item prices-table__item--main-color-light prices-table__item--title">Due Diligence fee*</span>
+                    <span class="prices-table__item prices-table__item--main-color-light">2,000</span>
+                    <span class="prices-table__item prices-table__item--main-color-light">2,000</span>
+                    <span class="prices-table__item prices-table__item--main-color-light">2,000</span>
+                    <span class="prices-table__item prices-table__item--main-color-light">2,000</span>
+                    <span class="prices-table__item prices-table__item--main-color-light">—</span>
+                    <span class="prices-table__item prices-table__item--main-color prices-table__item--title">Case processing & administrative fee</span>
+                    <span class="prices-table__item prices-table__item--main-color">10,000</span>
+                    <span class="prices-table__item prices-table__item--main-color">10,000</span>
+                    <span class="prices-table__item prices-table__item--main-color">10,000</span>
+                    <span class="prices-table__item prices-table__item--main-color">10,000</span>
+                    <span class="prices-table__item prices-table__item--main-color">10,000</span>
+                    <span class="prices-table__item prices-table__item--main-color-light prices-table__item--title">Application & Certificate fee</span>
+                    <span class="prices-table__item prices-table__item--main-color-light">150</span>
+                    <span class="prices-table__item prices-table__item--main-color-light">150</span>
+                    <span class="prices-table__item prices-table__item--main-color-light">150</span>
+                    <span class="prices-table__item prices-table__item--main-color-light">150</span>
+                    <span class="prices-table__item prices-table__item--main-color-light">—</span>
+                    <span class="prices-table__item prices-table__item--main-color prices-table__item--title">Passport fee</span>
+                    <span class="prices-table__item prices-table__item--main-color">160</span>
+                    <span class="prices-table__item prices-table__item--main-color">160</span>
+                    <span class="prices-table__item prices-table__item--main-color">160</span>
+                    <span class="prices-table__item prices-table__item--main-color">160</span>
+                    <span class="prices-table__item prices-table__item--main-color">160</span>
+                    <span class="prices-table__item prices-table__item--main-color-light prices-table__item--title">Total without tax</span>
+                    <span class="prices-table__item prices-table__item--main-color-light">162,310</span>
+                    <span class="prices-table__item prices-table__item--main-color-light">162,310</span>
+                    <span class="prices-table__item prices-table__item--main-color-light">162,310</span>
+                    <span class="prices-table__item prices-table__item--main-color-light">162,310</span>
+                    <span class="prices-table__item prices-table__item--main-color-light">162,310</span>
+                    <span class="prices-table__item prices-table__item--main-color prices-table__item--title">VAT @ 15%</span>
+                    <span class="prices-table__item prices-table__item--main-color">10,500</span>
+                    <span class="prices-table__item prices-table__item--main-color">10,500</span>
+                    <span class="prices-table__item prices-table__item--main-color">10,500</span>
+                    <span class="prices-table__item prices-table__item--main-color">10,500</span>
+                    <span class="prices-table__item prices-table__item--main-color">10,500</span>
+                    <span class="prices-table__item prices-table__item--footer-bg">Total</span>
+                    <span class="prices-table__item prices-table__item--footer-bg">172,810</span>
+                    <span class="prices-table__item prices-table__item--footer-bg">197,970</span>
+                    <span class="prices-table__item prices-table__item--footer-bg">213,130</span>
+                    <span class="prices-table__item prices-table__item--footer-bg">228,290</span>
+                    <span class="prices-table__item prices-table__item--footer-bg">22,410</span>
+                </div>
+                <div class="prices-table__caption">
+                    * Стоимость получения гражданства для каждого последующего заявителя — $18.000
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="about__wrap wrap">
+                <div class="about__block">
+                    <img src="images/left-men.png" alt="Men">
+                    <div class="about__text">
+                        <p>
+                            Программа Вануату “гражданство за инвестиции” появилась в 2015 году. При разработке закона правительство государства приняло во внимание негативный опыт иных стран и сделало условия программы комфортными для инвесторов.<br><br>
+                            Программу удалось сделать более удобной, чем в других странах. Главный показатель удобства - скорость рассмотрения заявок (4-5 недель) и отсутствие отказов. Программа оказалось эффективной - через нее в страну привлечено более $150 млн. иностранных инвестиций.
+                        </p>
+                    </div>
+                </div>
+                <div class="about__block">
+                    <div class="about__text">
+                        <p>
+                            Программа Вануату “гражданство за инвестиции” появилась в 2015 году. При разработке закона правительство государства приняло во внимание негативный опыт иных стран и сделало условия программы комфортными для инвесторов.<br><br>
+                            Программу удалось сделать более удобной, чем в других странах. Главный показатель удобства - скорость рассмотрения заявок (4-5 недель) и отсутствие отказов. Программа оказалось эффективной - через нее в страну привлечено более $150 млн. иностранных инвестиций.
+                        </p>
+                    </div>
+                    <img src="images/right-men.png" alt="Men">
+                </div>
+            </div>
+        </section>
+        <section class="faq">
+            <div class="faq__wrap wrap">
+                <div class="faq__title">Ответы на частые вопросы</div>
+                <div class="accordion">
+                    <div class="accordion__item">
+                        <div class="accordion__question-block">
+                            <span class="accordion__question">Кто может получить гражданство вместе с инвестором?</span>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 3.93402e-07L11 19M11 19L2 10M11 19L20 10" stroke="white" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <div class="accordion__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at autem commodi corporis est iste nesciunt nulla possimus quas, quia ratione saepe sapiente soluta! Atque quo repellat repudiandae sequi tenetur?
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <div class="accordion__question-block">
+                            <span class="accordion__question">Кто может получить гражданство вместе с инвестором?</span>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 3.93402e-07L11 19M11 19L2 10M11 19L20 10" stroke="white" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <div class="accordion__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at autem commodi corporis est iste nesciunt nulla possimus quas, quia ratione saepe sapiente soluta! Atque quo repellat repudiandae sequi tenetur?
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <div class="accordion__question-block">
+                            <span class="accordion__question">Кто может получить гражданство вместе с инвестором?</span>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 3.93402e-07L11 19M11 19L2 10M11 19L20 10" stroke="white" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <div class="accordion__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at autem commodi corporis est iste nesciunt nulla possimus quas, quia ratione saepe sapiente soluta! Atque quo repellat repudiandae sequi tenetur?
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <div class="accordion__question-block">
+                            <span class="accordion__question">Кто может получить гражданство вместе с инвестором?</span>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 3.93402e-07L11 19M11 19L2 10M11 19L20 10" stroke="white" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <div class="accordion__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at autem commodi corporis est iste nesciunt nulla possimus quas, quia ratione saepe sapiente soluta! Atque quo repellat repudiandae sequi tenetur?
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <div class="accordion__question-block">
+                            <span class="accordion__question">Кто может получить гражданство вместе с инвестором?</span>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 3.93402e-07L11 19M11 19L2 10M11 19L20 10" stroke="white" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <div class="accordion__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at autem commodi corporis est iste nesciunt nulla possimus quas, quia ratione saepe sapiente soluta! Atque quo repellat repudiandae sequi tenetur?
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <div class="accordion__question-block">
+                            <span class="accordion__question">Кто может получить гражданство вместе с инвестором?</span>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 3.93402e-07L11 19M11 19L2 10M11 19L20 10" stroke="white" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <div class="accordion__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at autem commodi corporis est iste nesciunt nulla possimus quas, quia ratione saepe sapiente soluta! Atque quo repellat repudiandae sequi tenetur?
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <div class="accordion__question-block">
+                            <span class="accordion__question">Кто может получить гражданство вместе с инвестором?</span>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 3.93402e-07L11 19M11 19L2 10M11 19L20 10" stroke="white" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <div class="accordion__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at autem commodi corporis est iste nesciunt nulla possimus quas, quia ratione saepe sapiente soluta! Atque quo repellat repudiandae sequi tenetur?
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="consultation">
+            <div class="consultation__wrap wrap">
+                <div class="consultation__title consultation--text">
+                    Закажите индивидуальную консультацию специалиста по Вануату
+                </div>
+                <div class="consultation__secondary-title consultation--text">
+                    Мигронис ознакомит с нюансами паспортной программы Вануату, ее плюсами и минусами, на примере реальных кейсов.
+                </div>
+                <div class="form-container">
+                    <div class="form-container__title consultation--text">
+                        Заполните форму
+                    </div>
+                    <div class="form-container__secondary-title consultation--text">
+                        Наш эксперт по программе Вануату обсудит с Вами детали процесса
+                    </div>
+                    <form action=""class="consultation-form">
+                        <input type="text" class="consultation-form__input" placeholder="Имя">
+                        <div class="custom-select" id="custom-select">
+                            <div class="custom-select__current-option custom-select--default">Тип инвестиции</div>
+                            <div class="custom-select__list">
+                                <div class="custom-select__list-item">Недвижимость</div>
+                                <div class="custom-select__list-item">Инвестиция</div>
+                                <div class="custom-select__list-item">Трасты</div>
+                            </div>
+                        </div>
+                        <select name="" class="consultation-form__select">
+                            <option value="">Недвижимость</option>
+                            <option value="">Инвестиция</option>
+                            <option value="">Трасты</option>
+                        </select>
+                        <input type="text" class="consultation-form__input" placeholder="Телефон">
+                        <button type="submit" class="consultation-form__submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

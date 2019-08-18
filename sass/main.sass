@@ -1,2 +1,360 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap')
+@import normalize
+@import variables
+
+*
+  box-sizing: border-box
 body
+  font-family: 'Montserrat', sans-serif
   background-color: black
+
+.wrap
+  max-width: 1200px
+  min-width: 320px
+  width: 100%
+  margin: 0 auto
+
+.head-block
+  background: linear-gradient(0deg, rgba(34, 51, 58, 0.38), rgba(34, 51, 58, 0.38)), url(../images/head-bg.png)
+.head-block__wrap
+  display: flex
+  flex-flow: column nowrap
+  align-items: center
+  justify-content: flex-start
+  padding: 180px 15px 55px
+.head-block__title
+  margin-bottom: 15px
+  font-size: 45px
+  line-height: 55px
+  font-weight: $font-weight-bold
+  text-align: center
+  color: #FFFFFF
+.head-block__secondary-text
+  font-size: 17px
+  line-height: 27px
+  font-weight: $font-weight-semibold
+  color: #FFFFFF
+  text-align: center
+
+.license
+  background-color: #FFFFFF
+  border-bottom: 1px solid $border-grey
+.license__wrap
+  display: flex
+  flex-flow: row nowrap
+  align-items: flex-start
+  justify-content: flex-start
+  padding: 80px 15px 60px
+.license__text-block
+  width: 700px
+  margin-right: 130px
+.license__paragraph
+  font-size: 15px
+  font-weight: $font-weight-normal
+  line-height: 24px
+  color: $color-black
+.license__warning
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: flex-start
+  margin-bottom: 30px
+  padding: 20px 30px
+  background: linear-gradient(146.18deg, rgba(122, 220, 232, 0.52) 9.65%, rgba(122, 220, 232, 0) 45.45%), $color-main
+  border-radius: 3px
+  svg
+    flex-shrink: 0
+  p
+    margin-left: 30px
+    font-size: 15px
+    line-height: 24px
+    font-weight: $font-weight-normal
+    color: #FFFFFF
+.license__caption
+  font-size: 11px
+  font-weight: $font-weight-semibold
+  line-height: 17px
+  color: $color-black
+.license__image-container
+  width: 270px
+  text-align: center
+.license__image
+  width: 100%
+  margin-bottom: 20px
+.license__image-text
+  font-size: 16px
+  font-weight: $font-weight-semibold
+  color: $color-black
+
+.advantages
+  background-color: #FFFFFF
+.advantages__wrap
+  padding: 80px 15px 100px
+.advantages__title
+  margin-bottom: 75px
+  font-size: $font-size-title
+  font-weight: $font-weight-semibold
+  text-align: center
+  color: $color-black
+.advantages__list
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: flex-start
+.advantages__list-item
+  display: flex
+  flex-flow: row nowrap
+  align-items: flex-start
+  justify-content: flex-start
+  max-width: 530px
+  width: 100%
+  min-height: 54px
+  margin-bottom: 35px
+  color: $color-black
+  &:nth-child(2n)
+    margin-left: 70px
+  svg
+    width: 20px
+    height: 19px
+    margin-right: 20px
+    flex-shrink: 0
+
+.calculation
+  background: linear-gradient(109.84deg, rgba(122, 220, 232, 0.52) 9.65%, rgba(122, 220, 232, 0) 45.45%), $color-main
+.calculation__wrap
+  padding: 90px 0 80px
+.calculation__title
+  font-size: $font-size-title
+  font-weight: $font-weight-medium
+  color: #FFFFFF
+  text-align: center
+.horizontal-divider
+  width: 85px
+  height: 4px
+  border-bottom: 4px solid #FFFFFF
+.calculation__divider
+  margin: 20px auto 50px
+.calculation__secondary-title
+  margin-bottom: 25px
+  font-size: 26px
+  font-weight: $font-weight-semibold
+  color: #FFFFFF
+  text-align: center
+.calculation__caption
+  margin-bottom: 45px
+  font-size: 15px
+  line-height: 24px
+  font-weight: $font-weight-normal
+  text-align: center
+  color: #FFFFFF
+
+.prices-table
+  display: grid
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr
+  margin-bottom: 35px
+.prices-table__item
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: flex-start
+  height: 50px
+  padding-left: 20px
+  color: #FFFFFF
+.prices-table__item--header-bg
+  font-size: 13px
+  font-weight: $font-weight-semibold
+  background: rgba(255, 255, 255, 0.36)
+.prices-table__item--main-color
+  background: transparent
+.prices-table__item--main-color-light
+  background: rgba(255, 255, 255, 0.06)
+.prices-table__item--title
+  font-size: 17px
+  font-weight: $font-weight-semibold
+  line-height: 23px
+.prices-table__item--footer-bg
+  font-size: 17px
+  line-height: 23px
+  font-weight: $font-weight-semibold
+  background: rgba(255, 255, 255, 0.36)
+.prices-table__caption
+  font-size: 15px
+  line-height: 24px
+  font-weight: $font-weight-semibold
+  color: #FFFFFF
+  text-align: center
+
+.about
+  background-color: #FFFFFF
+.about__wrap
+  padding: 70px 0
+.about__block
+  display: flex
+  flex-flow: row nowrap
+  align-items: flex-start
+  justify-content: flex-start
+  width: 100%
+  height: 450px
+  margin-bottom: 60px
+  border-radius: 3px
+  &:last-child
+    margin-bottom: 0
+  img
+    max-width: 470px
+    height: 100%
+.about__text
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: center
+  height: 100%
+  padding: 0 70px 0 65px
+  color: #FFFFFF
+  background-color: $color-main
+  p
+    font-size: 15px
+    line-height: 24px
+    font-weight: $font-weight-semibold
+
+.faq
+  background: linear-gradient(111.16deg, rgba(122, 220, 232, 0.52) 9.65%, rgba(122, 220, 232, 0) 45.45%), $color-main
+.faq__wrap
+  padding: 110px 0 145px
+.faq__title
+  margin-bottom: 50px
+  font-size: $font-size-title
+  font-weight: $font-weight-medium
+  color: #FFFFFF
+
+.accordion__item
+  background: transparent
+  border-bottom: 1px solid $border-grey
+  color: #FFFFFF
+  overflow: hidden
+  cursor: pointer
+.accordion__item--open .accordion__question-block svg
+  transform: rotate(180deg)
+.accordion__question-block
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: space-between
+  padding: 25px 0
+  svg
+    transition: 0.2s ease
+.accordion__question
+  font-size: 17px
+  font-weight: $font-weight-semibold
+  line-height: 27px
+.accordion__text
+  display: none
+  padding-bottom: 25px
+  font-size: 15px
+  font-weight: $font-weight-normal
+  line-height: 24px
+
+.consultation
+  background: linear-gradient(0deg, rgba(34, 51, 58, 0.48), rgba(34, 51, 58, 0.48)), url(../images/consultation-bg.png)
+.consultation__wrap
+  padding: 105px 0 130px
+.consultation--text
+  text-align: center
+  color: #FFFFFF
+.consultation__title
+  margin-bottom: 30px
+  font-size: $font-size-title
+  line-height: 47px
+  font-weight: $font-weight-medium
+.consultation__secondary-title
+  margin-bottom: 70px
+  font-size: 15px
+  line-height: 24px
+
+.form-container
+  width: 470px
+  margin: 0 auto
+.form-container__title
+  margin-bottom: 15px
+  font-size: 26px
+  line-height: 32px
+  font-weight: $font-weight-semibold
+.form-container__secondary-title
+  margin-bottom: 30px
+  font-size: 15px
+  font-weight: $font-weight-normal
+.consultation-form
+  width: 100%
+.consultation-form__input
+  width: 100%
+  height: 50px
+  margin-bottom: 20px
+  padding-left: 20px
+  outline: none
+  font: 15px/24px 'Montserrat', sans-serif
+  border: 1px solid rgba(46, 46, 46, 0.26)
+  border-radius: 3px
+  &::placeholder
+    font: 15px/24px 'Montserrat', sans-serif
+    color: rgba(46, 46, 46, 0.45)
+
+.custom-select__current-option
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: flex-start
+  height: 50px
+  padding-left: 20px
+  background-color: #FFFFFF
+  border: 1px solid rgba(46, 46, 46, 0.26)
+  border-radius: 3px
+  cursor: pointer
+  &:after
+    position: absolute
+    margin-top: -2px
+    top: 50%
+    right: 20px
+    content: ''
+    border-style: solid
+    border-width: 7px 4px 0 4px
+    border-color: #A1A1A1 transparent transparent transparent
+    transition: 0.2s ease
+.custom-select__current-option--open
+  &:after
+    transform: rotate(180deg)
+.custom-select
+  position: relative
+  margin-bottom: 20px
+.custom-select--default
+  color: rgba(46, 46, 46, 0.45)
+.custom-select__list
+  position: absolute
+  top: 50px
+  left: 0
+  right: 0
+  display: none
+  border: 1px solid rgba(46, 46, 46, 0.26)
+.custom-select__list-item
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: flex-start
+  height: 50px
+  padding-left: 20px
+  border-bottom: 1px solid rgba(46, 46, 46, 0.26)
+  background-color: #FFFFFF
+  cursor: pointer
+  &:last-child
+    border-bottom: none
+
+.consultation-form__select
+  display: none
+.consultation-form__submit
+  width: 100%
+  height: 50px
+  border: none
+  outline: none
+  color: #FFFFFF
+  background: linear-gradient(118.07deg, #7ADCE8 0%, rgba(122, 220, 232, 0) 39.34%), #2FBBCD
+  box-shadow: 0 24px 40px rgba(1, 107, 120, 0.3)
+  border-radius: 3px
+@import header
