@@ -565,7 +565,6 @@ body {
   max-width: 530px;
   width: 100%;
   min-height: 54px;
-  margin-bottom: 35px;
   color: #2E2E2E;
 }
 
@@ -1191,10 +1190,13 @@ body {
 }
 
 .article__name {
+  display: inline-block;
   margin-bottom: 15px;
   font-size: 15px;
   font-weight: 600;
   line-height: 18px;
+  color: #2E2E2E;
+  text-decoration: none;
 }
 
 .article__description {
