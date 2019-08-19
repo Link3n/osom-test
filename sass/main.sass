@@ -9,13 +9,17 @@ body
   background-color: black
 
 .wrap
-  max-width: 1200px
+  max-width: 1170px
   min-width: 320px
   width: 100%
   margin: 0 auto
 
 .head-block
-  background: linear-gradient(0deg, rgba(34, 51, 58, 0.38), rgba(34, 51, 58, 0.38)), url(../images/head-bg.png)
+  background-image: linear-gradient(0deg, rgba(34, 51, 58, 0.38), rgba(34, 51, 58, 0.38)), url(../images/head-bg.png)
+  background-repeat: no-repeat
+  background-position: right top
+  background-attachment: fixed
+  background-size: 1920px
 .head-block__wrap
   display: flex
   flex-flow: column nowrap
@@ -28,6 +32,7 @@ body
   line-height: 55px
   font-weight: $font-weight-bold
   text-align: center
+  text-transform: uppercase
   color: #FFFFFF
 .head-block__secondary-text
   font-size: 17px
@@ -44,7 +49,7 @@ body
   flex-flow: row nowrap
   align-items: flex-start
   justify-content: flex-start
-  padding: 80px 15px 60px
+  padding: 80px 0 60px
 .license__text-block
   width: 700px
   margin-right: 130px
@@ -75,13 +80,39 @@ body
   font-weight: $font-weight-semibold
   line-height: 17px
   color: $color-black
-.license__image-container
+
+.license-image__container
   width: 270px
   text-align: center
-.license__image
+  cursor: pointer
+  transition: 0.2s ease
+  &:hover
+    .license-image__layout
+      visibility: visible
+      opacity: 1
+.license-image__wrap
+  position: relative
   width: 100%
   margin-bottom: 20px
-.license__image-text
+  line-height: 0
+.license-image__picture
+  width: 100%
+.license-image__layout
+  position: absolute
+  visibility: hidden
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  opacity: 0
+  background: rgba(24, 49, 52, 0.4)
+  transition: 0.2s ease
+  svg
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+.license-image__text
   font-size: 16px
   font-weight: $font-weight-semibold
   color: $color-black
@@ -89,7 +120,7 @@ body
 .advantages
   background-color: #FFFFFF
 .advantages__wrap
-  padding: 80px 15px 100px
+  padding: 80px 0 100px
 .advantages__title
   margin-bottom: 75px
   font-size: $font-size-title
@@ -118,6 +149,11 @@ body
     height: 19px
     margin-right: 20px
     flex-shrink: 0
+    transform: rotate(-90deg)
+.advantages__list-text
+  font-size: 17px
+  line-height: 27px
+  font-weight: $font-weight-normal
 
 .calculation
   background: linear-gradient(109.84deg, rgba(122, 220, 232, 0.52) 9.65%, rgba(122, 220, 232, 0) 45.45%), $color-main
@@ -240,7 +276,10 @@ body
   align-items: center
   justify-content: space-between
   padding: 25px 0
+  user-select: none
   svg
+    width: 19px
+    height: 18px
     transition: 0.2s ease
 .accordion__question
   font-size: 17px
@@ -254,7 +293,11 @@ body
   line-height: 24px
 
 .consultation
-  background: linear-gradient(0deg, rgba(34, 51, 58, 0.48), rgba(34, 51, 58, 0.48)), url(../images/consultation-bg.png)
+  background-image: linear-gradient(0deg, rgba(34, 51, 58, 0.48), rgba(34, 51, 58, 0.48)), url(../images/consultation-bg.png)
+  background-repeat: no-repeat
+  background-position: center
+  background-attachment: fixed
+  background-size: cover
 .consultation__wrap
   padding: 105px 0 130px
 .consultation--text
@@ -293,6 +336,12 @@ body
   font: 15px/24px 'Montserrat', sans-serif
   border: 1px solid rgba(46, 46, 46, 0.26)
   border-radius: 3px
+  transition: 0.2s ease
+  &.error
+    &:focus
+      border: 2px solid #FF0000
+  &:focus
+    border: 1px solid rgba(46, 46, 46, 0.8)
   &::placeholder
     font: 15px/24px 'Montserrat', sans-serif
     color: rgba(46, 46, 46, 0.45)
@@ -304,6 +353,7 @@ body
   justify-content: flex-start
   height: 50px
   padding-left: 20px
+  font-size: 15px
   background-color: #FFFFFF
   border: 1px solid rgba(46, 46, 46, 0.26)
   border-radius: 3px
@@ -324,6 +374,7 @@ body
 .custom-select
   position: relative
   margin-bottom: 20px
+  z-index: 1
 .custom-select--default
   color: rgba(46, 46, 46, 0.45)
 .custom-select__list
@@ -357,4 +408,232 @@ body
   background: linear-gradient(118.07deg, #7ADCE8 0%, rgba(122, 220, 232, 0) 39.34%), #2FBBCD
   box-shadow: 0 24px 40px rgba(1, 107, 120, 0.3)
   border-radius: 3px
+  cursor: pointer
+  &:hover
+    background: linear-gradient(292.77deg, #7ADCE8 0%, rgba(122, 220, 232, 0) 39.34%), #2FBBCD
+    box-shadow: 0 24px 40px rgba(0, 58, 66, 0.3)
+.swear
+  background: linear-gradient(125.26deg, rgba(122, 220, 232, 0.52) 9.65%, rgba(122, 220, 232, 0) 45.45%), $color-main
+.swear__wrap
+  display: flex
+  flex-flow: row nowrap
+  align-items: flex-start
+  justify-content: flex-start
+  padding: 105px 0
+.swear__video-container
+  position: relative
+  width: 570px
+  margin-right: 60px
+  flex-shrink: 0
+  cursor: pointer
+.swear__video
+  width: 100%
+.play-button
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 90px
+  height: 60px
+  margin: -45px 0 0 -30px
+  background: rgba(0, 0, 0, 0.48)
+  border-radius: 15px
+  &:after
+    position: absolute
+    top: 50%
+    left: 50%
+    content: ''
+    border-style: solid
+    border-width: 12.5px 0 12.5px 24px
+    border-color: transparent transparent transparent #ffffff
+    transform: translate(-50%, -50%)
+.swear__text-block
+  color: #FFFFFF
+.swear__title
+  margin-bottom: 40px
+  font-size: 40px
+  font-weight: $font-weight-medium
+  line-height: 47px
+.swear__text
+  font-size: 15px
+  font-weight: $font-weight-normal
+  line-height: 23px
+
+.articles
+  background-color: #FFFFFF
+.articles__wrap
+  padding: 65px 0 75px
+.articles__title
+  margin-bottom: 75px
+  font-size: 40px
+  line-height: 49px
+  font-weight: $font-weight-semibold
+  text-align: center
+.articles__list
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-column-gap: 90px
+  grid-row-gap: 50px
+  width: 100%
+
+.article__image
+  max-height: 280px
+  margin-bottom: 30px
+.article__name
+  margin-bottom: 15px
+  font-size: 15px
+  font-weight: $font-weight-semibold
+  line-height: 18px
+.article__description
+  margin-bottom: 25px
+  font-size: 13px
+  font-weight: $font-weight-normal
+  line-height: 21px
+  color: $color-grey-text
+.article__info
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: flex-start
+.stars
+  position: relative
+  width: 96px
+  height: 16px
+.stars__container
+  position: absolute
+  top: 0
+  left: 0
+  line-height: 0
+  overflow: hidden
+.article__date
+  margin: 0 60px
+  font-size: 13px
+  line-height: 21px
+  color: $color-grey-text
+.article__views
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: flex-start
+.article__views-count
+  font-size: 13px
+  line-height: 21px
+  color: $color-grey-text
+
+.pagination
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: center
+  margin-top: 90px
+.pagination--item-size
+  width: 20px
+  height: 19px
+  margin: 0 10px
+  font-size: 15px
+  font-weight: $font-weight-semibold
+  color: $color-grey-text
+.pagination--prev
+  margin-right: 20px
+.pagination__action
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: center
+  width: 20px
+  height: 19px
+  cursor: pointer
+.pagination__button
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: center
+  cursor: pointer
+.pagination__button--active
+  width: 26px
+  height: 26px
+  color: #FFFFFF
+  background-color: $color-main
+.pagination--next
+  margin-left: 20px
+
+.image-modal
+  visibility: hidden
+  position: fixed
+  padding: 20px
+  top: 50%
+  left: 50%
+  background-color: #FFFFFF
+  opacity: 0
+  transform: translate(-50%, -50%) scale(0.8)
+  border-radius: 3px
+  transition: 0.2s ease
+  z-index: 10
+  &.show
+    visibility: visible
+    opacity: 1
+    transform: translate(-50%, -50%) scale(1)
+  .image-modal__close
+    position: absolute
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    justify-content: center
+    width: 50px
+    height: 50px
+    top: -50px
+    right: 0
+    cursor: pointer
+    svg
+      stroke: #FFFFFF
+  img
+    width: 500px
+
+.video-modal
+  visibility: hidden
+  position: fixed
+  padding: 20px
+  top: 50%
+  left: 50%
+  background-color: #FFFFFF
+  opacity: 0
+  transform: translate(-50%, -50%) scale(0.8)
+  border-radius: 3px
+  transition: 0.2s ease
+  z-index: 10
+  &.show
+    visibility: visible
+    opacity: 1
+    transform: translate(-50%, -50%) scale(1)
+  .video-modal__close
+    position: absolute
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    justify-content: center
+    width: 50px
+    height: 50px
+    top: -50px
+    right: 0
+    cursor: pointer
+    svg
+      stroke: #FFFFFF
+  video
+    width: 570px
+
+.background-screen
+  visibility: hidden
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  opacity: 0
+  background-color: rgba(0, 0, 0, 0.8)
+  transition: 0.2s ease
+  z-index: 5
+  &.show
+    visibility: visible
+    opacity: 1
+
 @import header
+@import footer
