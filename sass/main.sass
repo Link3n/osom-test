@@ -20,12 +20,16 @@ body
   background-position: right top
   background-attachment: fixed
   background-size: 1920px
+  @media screen and (max-width: 650px)
+    background-size: cover
 .head-block__wrap
   display: flex
   flex-flow: column nowrap
   align-items: center
   justify-content: flex-start
   padding: 180px 15px 55px
+  @media screen and (max-width: 650px)
+    padding: 130px 15px 30px
 .head-block__title
   margin-bottom: 15px
   font-size: 45px
@@ -34,6 +38,9 @@ body
   text-align: center
   text-transform: uppercase
   color: #FFFFFF
+  @media screen and (max-width: 650px)
+    font-size: 30px
+    line-height: 40px
 .head-block__secondary-text
   font-size: 17px
   line-height: 27px
@@ -50,13 +57,14 @@ body
   align-items: flex-start
   justify-content: flex-start
   padding: 80px 0 60px
-  @media screen and (max-width: 950px)
+  @media screen and (max-width: 1024px)
     flex-flow: column nowrap
     align-items: center
+    padding: 40px 15px 30px
 .license__text-block
-  width: 700px
+  max-width: 700px
   margin-right: 130px
-  @media screen and (max-width: 950px)
+  @media screen and (max-width: 1024px)
     margin-right: 0
     order: 2
 .license__paragraph
@@ -92,7 +100,7 @@ body
   text-align: center
   cursor: pointer
   transition: 0.2s ease
-  @media screen and (max-width: 950px)
+  @media screen and (max-width: 1024px)
     order: 1
   &:hover
     .license-image__layout
@@ -129,17 +137,24 @@ body
   background-color: #FFFFFF
 .advantages__wrap
   padding: 80px 0 100px
+  @media screen and (max-width: 1024px)
+    padding: 40px 15px 50px
 .advantages__title
   margin-bottom: 75px
   font-size: $font-size-title
   font-weight: $font-weight-semibold
   text-align: center
   color: $color-black
+  @media screen and (max-width: 650px)
+    font-size: 20px
+    margin-bottom: 35px
 .advantages__list
   display: grid
   grid-template-columns: 1fr 1fr
   grid-row-gap: 35px
   grid-column-gap: 10%
+  @media screen and (max-width: 650px)
+    grid-template-columns: 1fr
 .advantages__list-item
   display: flex
   flex-flow: row nowrap
@@ -164,23 +179,31 @@ body
   background: linear-gradient(109.84deg, rgba(122, 220, 232, 0.52) 9.65%, rgba(122, 220, 232, 0) 45.45%), $color-main
 .calculation__wrap
   padding: 90px 0 80px
+  @media screen and (max-width: 650px)
+    padding: 45px 15px 40px
 .calculation__title
   font-size: $font-size-title
   font-weight: $font-weight-medium
   color: #FFFFFF
   text-align: center
+  @media screen and (max-width: 650px)
+    font-size: 20px
 .horizontal-divider
   width: 85px
   height: 4px
   border-bottom: 4px solid #FFFFFF
 .calculation__divider
   margin: 20px auto 50px
+  @media screen and (max-width: 650px)
+    margin: 20px auto 25px
 .calculation__secondary-title
   margin-bottom: 25px
   font-size: 26px
   font-weight: $font-weight-semibold
   color: #FFFFFF
   text-align: center
+  @media screen and (max-width: 650px)
+    font-size: 18px
 .calculation__caption
   margin-bottom: 45px
   font-size: 15px
@@ -191,8 +214,12 @@ body
 
 .prices-table
   display: grid
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr
+  grid-template-columns: 2fr repeat(5, 1fr)
   margin-bottom: 35px
+  @media screen and (max-width: 650px)
+    width: 100%
+    grid-template-columns: 180px repeat(5, 1fr)
+    overflow-x: scroll
 .prices-table__item
   display: flex
   flex-flow: row nowrap
@@ -228,7 +255,7 @@ body
 .about
   background-color: #FFFFFF
 .about__wrap
-  padding: 70px 0
+  padding: 70px 15px
 .about__block
   display: flex
   flex-flow: row nowrap
@@ -239,7 +266,7 @@ body
   margin-bottom: 60px
   border-radius: 3px
   background-color: $color-main
-  @media screen and (max-width: 950px)
+  @media screen and (max-width: 1024px)
     height: auto
     flex-flow: column nowrap
     align-items: center
@@ -249,6 +276,8 @@ body
   img
     max-width: 470px
     height: 100%
+    @media screen and (max-width: 650px)
+      width: 100%
 .about__text
   display: flex
   flex-flow: row nowrap
@@ -257,6 +286,8 @@ body
   height: 100%
   padding: 0 70px 0 65px
   color: #FFFFFF
+  @media screen and (max-width: 650px)
+    padding: 0 20px
   p
     font-size: 15px
     line-height: 24px
@@ -266,11 +297,16 @@ body
   background: linear-gradient(111.16deg, rgba(122, 220, 232, 0.52) 9.65%, rgba(122, 220, 232, 0) 45.45%), $color-main
 .faq__wrap
   padding: 110px 0 145px
+  @media screen and (max-width: 1024px)
+    padding: 55px 15px 70px
 .faq__title
   margin-bottom: 50px
   font-size: $font-size-title
   font-weight: $font-weight-medium
   color: #FFFFFF
+  @media screen and (max-width: 650px)
+    margin-bottom: 25px
+    font-size: 20px
 
 .accordion__item
   background: transparent
@@ -288,6 +324,7 @@ body
   padding: 25px 0
   user-select: none
   svg
+    flex-shrink: 0
     width: 19px
     height: 18px
     transition: 0.2s ease
@@ -295,6 +332,10 @@ body
   font-size: 17px
   font-weight: $font-weight-semibold
   line-height: 27px
+  @media screen and (max-width: 650px)
+    width: 90%
+    font-size: 15px
+    line-height: 23px
 .accordion__text
   display: none
   padding-bottom: 25px
@@ -310,6 +351,8 @@ body
   background-size: cover
 .consultation__wrap
   padding: 105px 0 130px
+  @media screen and (max-width: 650px)
+    padding: 50px 15px 65px
 .consultation--text
   text-align: center
   color: #FFFFFF
@@ -318,6 +361,9 @@ body
   font-size: $font-size-title
   line-height: 47px
   font-weight: $font-weight-medium
+  @media screen and (max-width: 650px)
+    font-size: 20px
+    line-height: 30px
 .consultation__secondary-title
   margin-bottom: 70px
   font-size: 15px
@@ -326,11 +372,16 @@ body
 .form-container
   width: 470px
   margin: 0 auto
+  @media screen and (max-width: 650px)
+    width: 100%
 .form-container__title
   margin-bottom: 15px
   font-size: 26px
   line-height: 32px
   font-weight: $font-weight-semibold
+  @media screen and (max-width: 650px)
+    font-size: 18px
+    line-height: 28px
 .form-container__secondary-title
   margin-bottom: 30px
   font-size: 15px
@@ -422,6 +473,7 @@ body
   &:hover
     background: linear-gradient(292.77deg, #7ADCE8 0%, rgba(122, 220, 232, 0) 39.34%), #2FBBCD
     box-shadow: 0 24px 40px rgba(0, 58, 66, 0.3)
+
 .swear
   background: linear-gradient(125.26deg, rgba(122, 220, 232, 0.52) 9.65%, rgba(122, 220, 232, 0) 45.45%), $color-main
 .swear__wrap
@@ -430,19 +482,20 @@ body
   align-items: flex-start
   justify-content: flex-start
   padding: 105px 0
-  @media screen and (max-width: 950px)
+  @media screen and (max-width: 1024px)
     flex-flow: column nowrap
     align-items: center
-    padding: 20px 0
+    padding: 20px 15px
 .swear__video-container
   position: relative
   width: 570px
   margin-right: 60px
   flex-shrink: 0
   cursor: pointer
-  @media screen and (max-width: 950px)
+  @media screen and (max-width: 1024px)
+    width: 100%
     margin-right: 0
-    margin-bottom: 30px
+    margin-bottom: 20px
 .swear__video
   width: 100%
 .play-button
@@ -470,6 +523,9 @@ body
   font-size: 40px
   font-weight: $font-weight-medium
   line-height: 47px
+  @media screen and (max-width: 650px)
+    margin-bottom: 20px
+    font-size: 20px
 .swear__text
   font-size: 15px
   font-weight: $font-weight-normal
@@ -479,6 +535,8 @@ body
   background-color: #FFFFFF
 .articles__wrap
   padding: 65px 0 75px
+  @media screen and (max-width: 1024px)
+    padding: 30px 15px
 .articles__title
   margin-bottom: 75px
   font-size: 40px
@@ -491,10 +549,10 @@ body
   grid-column-gap: 90px
   grid-row-gap: 50px
   width: 100%
-  @media screen and (min-width: 681px) and (max-width: 950px)
+  @media screen and (min-width: 681px) and (max-width: 1024px)
     grid-column-gap: 45px
   @media screen and (max-width: 680px)
-    grid-template-columns: 1fr
+    grid-template-columns: 100%
 
 .article__image
   width: 100%
@@ -534,6 +592,8 @@ body
   font-size: 13px
   line-height: 21px
   color: $color-grey-text
+  @media screen and (max-width: 650px)
+    margin: 0 20px
 .article__views
   display: flex
   flex-flow: row nowrap
@@ -593,6 +653,11 @@ body
   border-radius: 3px
   transition: 0.2s ease
   z-index: 10
+  @media screen and (min-width: 651px) and (max-width: 1024px)
+    max-width: 60%
+    max-height: 80%
+  @media screen and (max-width: 650px)
+    width: 80%
   &.show
     visibility: visible
     opacity: 1
@@ -612,6 +677,9 @@ body
       stroke: #FFFFFF
   img
     width: 500px
+    @media screen and (max-width: 1024px)
+      max-width: 100%
+      max-height: 100%
 
 .video-modal
   visibility: hidden
@@ -625,6 +693,11 @@ body
   border-radius: 3px
   transition: 0.2s ease
   z-index: 10
+  @media screen and (min-width: 651px) and (max-width: 1024px)
+    max-width: 60%
+    max-height: 80%
+  @media screen and (max-width: 650px)
+    width: 80%
   &.show
     visibility: visible
     opacity: 1
@@ -644,6 +717,9 @@ body
       stroke: #FFFFFF
   video
     width: 570px
+    @media screen and (max-width: 1024px)
+      width: 100%
+
 
 .background-screen
   visibility: hidden

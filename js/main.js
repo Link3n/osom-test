@@ -1,18 +1,64 @@
 import videoModal from './video-modal.js';
 import imageModal from './image-modal.js';
 import customSelect from './custom-select.js';
-import languageSwithcer from './language-switcher.js';
+import languageSwitcher from './language-switcher.js';
 
 $(function () {
     var $header = $('header');
 
     if ($(window).scrollTop() !== 0) {
         $header.addClass('header--fixed-color');
+    } else {
+        $header.removeClass('header--fixed-color');
     }
+    
+    $(window).resize(function () {
+        var $nav = $('.navigation');
 
-    $('#contacts-anchor').on('click', function (e) {
-        e.preventDefault();
+        if (!$nav.is(':visible')) {
+            $nav.attr('style', null);
+        }
+    });
 
+    $('.contacts__icon').on('click', function () {
+        var $self = $(this);
+
+        $self.toggleClass('contacts__icon--open')
+            .siblings('.contacts__wrap').toggleClass('contacts__wrap--show');
+
+        if ($self.hasClass('contacts__icon--open')) {
+            var $contacts = $('.contacts__wrap');
+
+            $(document).on('mouseup', function (e) {
+                if (!$contacts.has(e.target).length && !$contacts.is(e.target)) {
+                    $self.removeClass('contacts__icon--open')
+                        .siblings('.contacts__wrap').removeClass('contacts__wrap--show');
+                }
+            });
+        } else {
+            $(document).off('mouseup');
+        }
+    });
+
+    $('.header__nav-icon').on('click', function () {
+        var $self = $(this);
+        var $nav = $('.navigation');
+
+        $nav.slideToggle(300);
+
+        if (!$header.hasClass('header--fixed-color')) {
+            $header.addClass('header--fixed-color');
+        }
+
+        if ($nav.is(':visible')) {
+            $(document).on('mouseup', function (e) {
+                if (!$nav.has(e.target).length && !$nav.is(e.target) && !$self.has(e.target).length && !$self.is(e.target)) {
+                    $nav.slideUp(300);
+                }
+            });
+        } else {
+            $(document).off('mouseup');
+        }
     });
 
     $('.navigation__link').on('click', function (e) {
@@ -80,5 +126,5 @@ $(function () {
     imageModal.init();
     customSelect.init();
     videoModal.init();
-    languageSwithcer.init();
+    languageSwitcher.init();
 });
