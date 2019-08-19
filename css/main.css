@@ -1513,13 +1513,6 @@ body {
   z-index: 10;
 }
 
-@media screen and (min-width: 651px) and (max-width: 1024px) {
-  .image-modal {
-    max-width: 60%;
-    max-height: 80%;
-  }
-}
-
 @media screen and (max-width: 650px) {
   .image-modal {
     width: 80%;
@@ -1564,7 +1557,7 @@ body {
   width: 500px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 650px) {
   .image-modal img {
     max-width: 100%;
     max-height: 100%;
@@ -1587,13 +1580,6 @@ body {
   -o-transition: 0.2s ease;
   transition: 0.2s ease;
   z-index: 10;
-}
-
-@media screen and (min-width: 651px) and (max-width: 1024px) {
-  .video-modal {
-    max-width: 60%;
-    max-height: 80%;
-  }
 }
 
 @media screen and (max-width: 650px) {
@@ -1640,7 +1626,7 @@ body {
   width: 570px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 650px) {
   .video-modal video {
     width: 100%;
   }
